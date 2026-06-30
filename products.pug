@@ -1,0 +1,32 @@
+html
+  head
+    title Products
+  body
+    script(src="/js/products.js" defer)
+    include ./header
+
+    script.
+      
+      
+      let usersList = !{JSON.stringify(users)};
+      let shopsList = !{JSON.stringify(shops)};
+      let productsList = !{JSON.stringify(products)};
+
+
+    div
+      h1 Products
+
+      label Search By: 
+      select#filter
+            option() Select an option
+            option(value="All") All Products
+            option(value="ProductType") Product Type
+            option(value="ShopName") Shop Name
+            option(value="MyLikes") My Likes
+      br
+      br
+      div#searchDiv
+
+      h3
+        div#products 
+        

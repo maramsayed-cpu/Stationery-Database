@@ -1,0 +1,45 @@
+html
+  head
+    title= product.productName
+  body
+
+    script(src="/js/like&Review.js" defer)
+    include ./header
+
+    h1= product.productName
+
+    label#productID(data-id=product.productID) Product ID: #{product.productID}
+    br
+    label Price: $ #{product.price} CAD
+    br
+    label Type: #{product.type}
+    br
+    label Image ID: #{product.imageID}
+    br
+    label From Shop: #{shopName}
+    br
+    label#likes Likes: #{likes}
+    br
+    br
+    button#like Like Product
+    div#likeDiv
+    br
+    br
+    
+    button#review Add Review
+    div#reviewDiv
+    br
+    br
+    if reviews
+      h3 Reviews 
+      each review in reviews 
+        ul 
+          li 
+            label Rating: #{review.rating}
+            br
+            label Comment: #{review.reviewComment}
+            br
+            label By: #{review.userName}
+
+
+

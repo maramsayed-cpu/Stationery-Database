@@ -1,0 +1,30 @@
+html
+  head
+    title= shop.shopName
+  body
+
+    include ./header
+
+    h1= shop.shopName
+
+    h3 Artist Name: #{shop.artistName}
+    h3 Based In (Location): #{shop.basedIn}
+    if links 
+        h3 Online Shop Links: 
+        each link in links
+            ul
+                li #{link}
+    else 
+        if stores
+            h3 Available in Stores: 
+                    each store in stores
+                        ul
+                            li #{store.storeName} (#{store.storeAddress})
+
+    if products 
+        h3 Products
+            each product in products 
+                ul 
+                    li 
+                        a(href="/products/" + product.productID) #{product.productName}
+                

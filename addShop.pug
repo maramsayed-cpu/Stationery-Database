@@ -1,0 +1,30 @@
+html
+  head
+    title Add Product
+  body
+
+    script(src="/js/addShop.js" defer)
+    include ./header
+    div 
+        h1 Add a Shop
+        label Shop Name: 
+        input(type="text" id="shopName" name="shopName")
+        br
+        br
+        label Artist Name: 
+        input(type="text" id="artistName" name="artistName")
+        br
+        br
+        label Shop Location (Based In): 
+        input(type="text" id="basedIn" name="basedIn")
+        br
+        br
+        label Shop Site: 
+        input(type="text" id="site" name="site")
+        br
+        br
+        label Shop Link 
+        input(type="text" id="link" name="link")
+        br
+        br
+        button(id="save") save

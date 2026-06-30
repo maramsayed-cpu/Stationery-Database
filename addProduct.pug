@@ -1,0 +1,63 @@
+html
+  head
+    title Add Product
+  body
+
+    script(src="/js/addProduct.js" defer)
+    include ./header
+    div 
+        h1 Add a Product
+
+        label Product Name: 
+        input(type="text" id="name" name="name")
+        br
+        br
+        label Price: $ 
+        input(type="number" step="any" id="price" name="price")
+        br
+        br
+        label Product Type: 
+        select#type
+            option(value="Washi Tape") Washi Tape
+            option(value="Sticker Flake") Sticker Flake
+            option(value="Sticker Sheet") Sticker Sheet
+            option(value="Art Print") Art Print
+            option(value="Memo Pad") Memo Pad
+            option(value="Other") Other
+
+        br
+        br
+        label Shop Name: 
+        input(type="text" id="shopName" name="shopName")
+        br
+        br
+        label Artist Name: 
+        input(type="text" id="artistName" name="artistName")
+        br
+        br
+        label Shop Location (Based In): 
+        input(type="text" id="basedIn" name="basedIn")
+        br
+        br
+        label User ID: 
+        input(type="text" id="user" name="user")
+        br
+        br
+        label Purchased: 
+        select#purchased
+            option(value="Online") Online
+            option(value="In Person") In Person
+        br
+        br
+        button(id="next") Next
+        br
+        br
+        label#label1
+        input#input1
+        br
+        br
+        label#label2 
+        input#input2
+        br
+        br
+        button#doneButton

@@ -1,0 +1,18 @@
+html
+  head
+    title Users
+  body
+    include ./header
+
+    div
+      h1 Users
+
+      each user in users
+        h3 
+          ul
+            li  
+              a(href="/users/" + user.userID) #{user.userName} (ID: #{user.userID})
+              
+
+          
+            
